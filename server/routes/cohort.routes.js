@@ -5,7 +5,7 @@ const CohortSchema = require("../models/Cohorts.model.js")
   router.get("/", (req, res,next) => {
     CohortSchema.find({})
       .then((cohorts) => {
-        res.sendStatus(200).json(cohorts);
+        res.status(200).json(cohorts);
       })
       .catch((error) => {
         next(error)

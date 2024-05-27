@@ -6,10 +6,10 @@ const cors = require("cors")
 
 // MIDDLEWARE
 function config(app) {    
-    app.use(cors({
-      origin: [process.env.ORIGIN]
-    })) //deja entrar lo que especifiquemos
-    //app.use(cors({origin:'*'})) //deja entrar a cualquiera
+    app.use(cors({ 
+      origin: ["http://localhost:5173"]}))
+     /* app.use(cors({origin:'*'})) */ //deja entrar a cualquiera
+    //deja entrar lo que especifiquemos
     app.use(express.json());
     app.use(morgan("dev"));
     app.use(express.static("public"));

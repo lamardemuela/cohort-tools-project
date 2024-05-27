@@ -23,6 +23,7 @@ function CohortListPage() {
     axios
       .get(`${API_URL}/api/cohorts?${queryString}`)
       .then((response) => {
+        console.log(response);
         setCohorts(response.data);
       })
       .catch((error) => console.log(error));
